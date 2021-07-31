@@ -12,9 +12,7 @@ public class EntradaDados {
 		System.out.println("digite o valor a ser sacado:");
 		int valor = entrada.nextInt();
 		
-		CaixaEletronico caixa = new CaixaEletronico();
-		
-		caixa.retirar(valor);
+		CaixaEletronico.retirar(valor);
 
 	}
 

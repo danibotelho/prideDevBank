@@ -19,12 +19,7 @@ public class ContaCorrenteTest {
 	
 	@Test
 	void deveSerpossivelSacarUtilizandoChequeEspecial() {
-		
-		
-		
 		contaCorrente.sacar(101);
-		
-		
 		assertTrue(contaCorrente.getSaldo() == -1);
 		
 	}
