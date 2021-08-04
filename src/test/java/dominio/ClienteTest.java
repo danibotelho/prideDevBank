@@ -1,34 +1,40 @@
 package dominio;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import util.Validador;
 
 public class ClienteTest {
 	
 	@Test
-	
-	void deveCriarClientePassandoValores() {
-		Cliente cliente = new Cliente("Daniela", "14785236920");
+	void deveSerPossivelCriarClientePassandoValores() {
+		Cliente cliente = new Cliente("Ana","12345678909");
 		
-		String nomeCliente = cliente.getNomeCorrentista();
-		String cpfCliente = cliente.getCpfCorrentista();
 		
-		assertEquals("Daniela",nomeCliente);
-		assertEquals("14785236920",cpfCliente);
-		//assertFalse(cpfCliente == "0052229996662");
-		//assertTrue(cliente.getCpfCorrentista().equals("1478523692"));
+		String nomeCliente = cliente.getNome();
+		String cpfCorrentista = cliente.getCPF();
+		
+		Assertions.assertEquals("Ana",nomeCliente);
+		Assertions.assertEquals("12345678909",cpfCorrentista);
+		
 	}
 	
-//	@Test
-//	void deveValidarSeCPFContem11Caracteres() {
-//		Cliente cliente = new Cliente("Daniela", "1478523692");
+	
+	@Test
+	void deveValidarSeCPFContem11Caracteres() {
+//		Cliente cliente = new Cliente("Ana","1234567890");
 //		
-//		String nomeCliente = cliente.getNomeCorrentista();
-//		String cpfCliente = cliente.getCpfCorrentista();
-//
-//	}
+//		String nomeCliente = cliente.getNome();
+//		String cpfCorrentista = cliente.getCPF();
+//		
+//		Assertions.assertEquals("Ana",nomeCliente);
+//		Assertions.assertEquals("12345678909",cpfCorrentista);
+//		
+	}
+	
+	
+	
+	
+
 }

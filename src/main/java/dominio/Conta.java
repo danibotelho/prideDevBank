@@ -7,9 +7,19 @@ public class Conta {
 	String numeroConta;
 	protected String numeroAgencia;
 	protected float saldo;
-	protected String tipoConta;
 	protected Cliente cliente;
 	protected String chavePix[] = new String[3]; // email, cpf, telefone
+
+	public Conta() {
+		
+	}
+	
+	
+	public Conta(String numeroConta,String numeroAgencia) {
+		this.numeroConta = numeroConta;
+		this.numeroAgencia = numeroAgencia;
+	}
+
 
 	public float getSaldo() {
 		return saldo;
@@ -49,4 +59,13 @@ public class Conta {
 		
 	}
 
+	public String getNumeroConta() {
+		return numeroConta;
+	}
+
+	public String getNumeroAgencia() {
+		return numeroAgencia;
+	}
+
+	
 }

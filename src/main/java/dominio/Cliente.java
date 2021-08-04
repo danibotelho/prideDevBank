@@ -3,41 +3,27 @@ package dominio;
 import static util.Validador.validaCPF;
 
 public class Cliente {
-	protected String nomeCorrentista;
+
 	protected String cpfCorrentista;
+	protected String nomeCorrentista;
 	
-		
-	public Cliente(String nomeCorrentista, String cpfCorrentista ) {
-		validaCPF(cpfCorrentista);
-		this.nomeCorrentista = nomeCorrentista;
-		this.cpfCorrentista = cpfCorrentista;
-		
+	public Cliente(String nome, String cpf) {
+		validaCPF(cpf);
+		this.nomeCorrentista = nome;
+		this.cpfCorrentista = cpf;
 	}
-		
-	
-	public String getNomeCorrentista() {
+
+	public String getNome() {
+		if(true)
+			throw new RuntimeException("erro Generico");
 		return nomeCorrentista;
 	}
 
-
-	public void setNomeCorrentista(String nomeCorrentista) {
-		this.nomeCorrentista = nomeCorrentista;
-	}
-
-
-	public String getCpfCorrentista() {
+	public String getCPF() {
 		return cpfCorrentista;
 	}
-
-
-	public void setCpfCorrentista(String cpfCorrentista) {
-		this.cpfCorrentista = cpfCorrentista;
-	}
 	
-	
-
-	
-	
-	
-	//construtor que recebe nome e cpf 
+	//contrutor que recebe nome e cpf
+	//validar cpf
+	// se cpf invalido dá erro do tipo InvalidArgument;
 }
