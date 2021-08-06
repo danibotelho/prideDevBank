@@ -2,8 +2,9 @@ package executavel;
 
 import java.sql.SQLException;
 
+import dao.ClienteDao;
 import dao.ContaDao;
-import dominio.Conta;
+import dominio.Cliente;
 
 
 
@@ -28,10 +29,16 @@ public class TestaConexao {
 //						
 //		con.close();
 		
+		//ContaDao contaDao = new ContaDao();
 		
-		ContaDao contaDao = new ContaDao();
-		Conta conta = new Conta("25471","2323");
-		contaDao.save(conta);
+		Cliente cliente = new Cliente("Lara", "12345698745", "Laratfo");
+		ClienteDao clienteDao = new ClienteDao();
+		clienteDao.save(cliente);
+		
+		//Conta conta = new Conta("25471","2323", 235 ,cliente);
+		
+		
+		
 		
 		} catch (SQLException e) {
 			e.printStackTrace();

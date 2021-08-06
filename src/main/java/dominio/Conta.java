@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Conta {
+	protected int id;
 	String numeroConta;
 	protected String numeroAgencia;
 	protected float saldo;
@@ -12,13 +13,19 @@ public class Conta {
 
 	public Conta() {
 		
-	}
+	}	
 	
-	
-	public Conta(String numeroConta,String numeroAgencia) {
+
+
+
+	public Conta(String numeroConta, String numeroAgencia, float saldo, Cliente cliente) {
 		this.numeroConta = numeroConta;
 		this.numeroAgencia = numeroAgencia;
+		this.saldo = saldo;
+		this.cliente = cliente;
 	}
+
+
 
 
 	public float getSaldo() {
@@ -66,6 +73,8 @@ public class Conta {
 	public String getNumeroAgencia() {
 		return numeroAgencia;
 	}
+	public Cliente getCliente() {
+		return cliente;
+	}
 
-	
 }
