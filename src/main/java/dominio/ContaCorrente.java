@@ -1,8 +1,12 @@
 package dominio;
 
+<<<<<<< HEAD
 import Exceptions.SaldoInsufucienteException;
 
 public class ContaCorrente extends Conta  implements Sacavel {
+=======
+public class ContaCorrente extends Conta{
+>>>>>>> 2b2d05c9dbd8fd33f4e364325be2f15d9b2aea2d
 	private float chequeEspecial = 100;
 	
 
@@ -11,6 +15,7 @@ public class ContaCorrente extends Conta  implements Sacavel {
 		if (valorSaque  <= this.saldo + chequeEspecial) {
 			this.saldo = this.saldo - valorSaque;
 		}else{
+<<<<<<< HEAD
 			throw new SaldoInsufucienteException("Saldo insuficiente");
 		}
 	}
@@ -28,6 +33,11 @@ public class ContaCorrente extends Conta  implements Sacavel {
 
 
 	
+=======
+			throw new RuntimeException("Saldo insuficiente");
+		}
+	}
+>>>>>>> 2b2d05c9dbd8fd33f4e364325be2f15d9b2aea2d
 
 	
 }

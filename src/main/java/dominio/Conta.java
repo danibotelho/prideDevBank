@@ -1,5 +1,6 @@
 package dominio;
 
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,12 +28,23 @@ public class Conta {
 
 
 
+=======
+public class Conta {
+	String numeroConta;
+	protected String numeroAgencia;
+	protected float saldo;
+	protected String tipoConta;
+	protected String cpfCorrentista;
+	protected String nomeCorrentista;
+	protected String chavePix;
+>>>>>>> 2b2d05c9dbd8fd33f4e364325be2f15d9b2aea2d
 
 	public float getSaldo() {
 		return saldo;
 
 	}
 
+<<<<<<< HEAD
 	public String getChavePix(int pos) {
 		return chavePix[pos];
 	}
@@ -48,12 +60,21 @@ public class Conta {
 				chavePix[2] = novaChave;
 			}
 		}
+=======
+	public String getChavePix() {
+		return chavePix;
+	}
+
+	public void setChavePix(String chavePix) {
+		this.chavePix = chavePix;
+>>>>>>> 2b2d05c9dbd8fd33f4e364325be2f15d9b2aea2d
 	}
 
 	public void depositar(float valorDepositado) {
 		this.saldo += valorDepositado;
 	}
 
+<<<<<<< HEAD
 	public void trasferir(float valorTransferencia, Conta contaDestino) {
 
 		this.sacar(valorTransferencia);
@@ -77,4 +98,21 @@ public class Conta {
 		return cliente;
 	}
 
+=======
+	public void sacar(float valorSaque)  {
+
+		if (valorSaque  <= this.saldo) {
+			this.saldo = this.saldo - valorSaque;
+		}else{
+			throw new RuntimeException("Saldo insuficiente");
+		}
+	}
+	
+	public void trasferir(float valorTransferencia, Conta outraConta) {
+		this.sacar(valorTransferencia);
+		outraConta.depositar(valorTransferencia);
+		
+	}
+
+>>>>>>> 2b2d05c9dbd8fd33f4e364325be2f15d9b2aea2d
 }
