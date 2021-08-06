@@ -21,15 +21,12 @@ public class ClienteDao {
 		try {
 			Statement comando = this.conexao.createStatement();
 			
-			String insert = "insert into cliente  values(nome, cpf, nomeSocial)"
+			comando.execute("insert into cliente (nome, cpf, nomeSocial) values(" 
 			+"'" + cliente.getNome() +"'"
 			+ ",'"+ cliente.getCPF()+"'"
 			+ ",'"+ cliente.getNomeS()+ "'"
-			+ ");" 
-			;
-			
-			comando.execute(insert);
-			
+			+ ");" ); 
+					
 			
 		}catch (SQLException e) {
 			e.printStackTrace();
