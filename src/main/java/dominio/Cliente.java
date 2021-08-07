@@ -32,6 +32,26 @@ public class Cliente {
 		return id;
 	}
 
+	
+	public void setCpfCorrentista(String cpfCorrentista) {
+		this.cpfCorrentista = cpfCorrentista;
+	}
+
+	
+	public void setNomeCorrentista(String nomeCorrentista) {
+		this.nomeCorrentista = nomeCorrentista;
+	}
+
+	public void setNomeSocial(String nomeSocial) {
+		this.nomeSocial = nomeSocial;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	
+
 
 	//contrutor que recebe nome e cpf
 	//validar cpf

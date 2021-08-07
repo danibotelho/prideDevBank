@@ -1,6 +1,5 @@
 package dominio;
 
-<<<<<<< HEAD
 public class ContaPoupanca extends Conta implements Sacavel{
 
 	public void sacar(float valorSaque)  {
@@ -17,8 +16,4 @@ public class ContaPoupanca extends Conta implements Sacavel{
 		outraConta.depositar(valorTransferencia);
 		
 	}
-=======
-public class ContaPoupanca extends Conta {
-
->>>>>>> 2b2d05c9dbd8fd33f4e364325be2f15d9b2aea2d
 }
